@@ -7,5 +7,8 @@ thousand = (user_input // 1000) % 10
 hundreds = (user_input // 100) % 10
 tens = (user_input // 10) % 10
 ones = (user_input // 1) % 10
-#виводимо на екран завдяки print та міняємо змінні місцями в протилежну сторону
-print(ones, tens, hundreds, thousand, ten_thousand)
+
+#обертаємо число
+reversed_number = ones * 10000 + tens * 1000 + hundreds * 100 + thousand * 10 + ten_thousand
+# виводимо на екран
+print(reversed_number)
