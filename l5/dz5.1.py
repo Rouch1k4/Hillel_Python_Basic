@@ -6,13 +6,15 @@ if not text:
     print(False)
 elif text[0].isdigit():
     print(False)
-elif not text.islower():
+elif any(char.isupper() for char in text):
     print(False)
 elif ' ' in text:
     print(False)
 elif any(char in string.punctuation and char != '_' for char in text):
     print(False)
 elif text in keyword.kwlist:
+    print(False)
+elif '__' in text:
     print(False)
 else:
     print(True)
